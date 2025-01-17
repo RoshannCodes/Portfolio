@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const MyWork = () => {
     return (
-        <div id="myWork" className="flex flex-col justify-center w-full md:px-16 md:my-40 my-20 md:scroll-mt-20 scroll-mt-5">
+        <div id="myWork" className="flex flex-col justify-center w-full md:px-16 my-20 md:scroll-mt-20 scroll-mt-5">
             <h1 className="md:text-5xl text-4xl font-bold font-allertaStencil mb-8">
                 My Work
             </h1>

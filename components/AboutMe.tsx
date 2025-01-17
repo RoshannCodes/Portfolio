@@ -15,45 +15,37 @@ const AboutMe = () => {
 
     const Education: TabItem[] = [
         {
-            title: 2016,
-            description: 'Some Degree'
-        },
-        {
-            title: 2020,
-            description: 'Some Degree'
+            title: "2024 - Present",
+            description: 'IOE Pulchowk Campus'
         },
         {
             title: 2023,
-            description: 'Some Degree'
+            description: 'Viswa Niketan Secondary School'
+        },
+        {
+            title: 2021,
+            description: 'Nilkantha Secondary School'
         },
     ]
 
     const Skills: TabItem[] = [
         {
-            title: "Title 1",
-            description: 'Some skill'
+            title: "Data Wrangling and Preprocessing",
+            description: 'Profeicient in cleaning, transforming and preparing large datasets using Python librarries'
         },
         {
-            title: "Title 2",
-            description: 'Some amazing skill'
+            title: "Exploratory Data Analysis(EDA)",
+            description: 'Expertise in identifying patteerns , trends and insits through visualization tools like Matplotlib and Seaborn'
         },
         {
-            title: "Title 3",
-            description: 'Data Scientist'
+            title: "Machine Learning and Predictive Modeling",
+            description: 'Experienced in evaluating models. Knowledg of building models using Scikit-learn'
         },
     ]
 
     const Experience: TabItem[] = [
         {
-            title: "2016 - 2020",
-            description: 'No description available'
-        },
-        {
-            title: "2020 - 2023",
-            description: 'No description available'
-        },
-        {
-            title: "2023 - Present",
+            title: "Not Availabe",
             description: 'No description available'
         },
     ]
@@ -77,7 +69,7 @@ const AboutMe = () => {
 
 
     return (
-        <div id="aboutMe" className='w-full flex md:flex-row flex-col justify-around md:scroll-mt-20 scroll-mt-5'>
+        <div id="aboutMe" className='w-full flex md:flex-row flex-col justify-around items-center md:scroll-mt-20 scroll-mt-5'>
             <div className='imageContainer'>
                 <div>
                     <Image
@@ -90,16 +82,16 @@ const AboutMe = () => {
                 </div>
             </div>
 
-            <div className="">
+            <div className="md:w-1/2 w-full">
                 <h1 className="md:text-5xl text-4xl font-bold font-allertaStencil md:mb-5 md:mt-0 my-5">
                     About Me
                 </h1>
                 <p className="opacity-75 text-sm max-w-xl">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, perferendis doloribus voluptas deleniti fugiat qui sequi beatae aliquam laudantium! In aut inventore dolores sit quae molestias voluptatibus eum excepturi rem, nisi iste, ut necessitatibus?
+                I am Roshan Koirala, a data science enthusiast studying at Pulchowk Engineering College. Skilled in programming, data analysis, and machine learning, I use tools like Python, Pandas, and Matplotlib to derive insights and solve problems. Passionate about AI and advanced analytics, I am committed to continuous learning and making a meaningful impact in data science.
                 </p>
 
-                <div className="md:w-1/2 w-[80%]">
-                    <div className="options flex flex-row justify-between mt-5">
+                <div className="">
+                    <div className="options md:w-1/2 w-[80%] flex flex-row justify-between mt-5">
 
                         {
                             ['Skills', 'Experience', 'Education'].map((item, index) =>
@@ -115,17 +107,17 @@ const AboutMe = () => {
                         }
                     </div>
 
-                    <div className="values mt-5 flex flex-col gap-3 items-start justify-center">
+                    <div className="values md:min-h-[240px] mt-5 flex flex-col gap-3 items-start max-w-lg w-full">
                         {
                             currentTab.map((item: TabItem, index: number) => (
                                 <div
                                     key={index}
                                     className="flex flex-col"
                                 >
-                                    <p className="text-sky-500">
+                                    <p className="text-sky-500 text-sm md:text-base">
                                         {item.title}
                                     </p>
-                                    <p>{item.description}</p>
+                                    <p className="text-[0.8rem] md:text-sm">{item.description}</p>
                                 </div>
                             ))
                         }
