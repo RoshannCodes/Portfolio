@@ -1,92 +1,76 @@
 import Image from "next/image"
+import Link from "next/link"
 
 const MyWork = () => {
+
+    const myWork = [
+        {
+            imageSrc: '/images/Image.jpg',
+            title: 'The Title',
+            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas delectus, et odit enim inventore illum nemo quaerat totam iste assumenda porro, dolorum cum.',
+            link: '#'
+        },
+        {
+            imageSrc: '/images/Image.jpg',
+            title: 'The Title',
+            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas delectus, et odit enim inventore illum nemo quaerat totam iste assumenda porro, dolorum cum.',
+            link: '#'
+        },
+        {
+            imageSrc: '/images/Image.jpg',
+            title: 'The Title',
+            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas delectus, et odit enim inventore illum nemo quaerat totam iste assumenda porro, dolorum cum.',
+            link: '#'
+        },
+    ]
+
     return (
-        <div id="myWork" className="flex flex-col justify-center w-full md:px-16 my-20 md:scroll-mt-20 scroll-mt-5">
+        <div id="myWork" className="flex flex-col justify-center w-full md:px-16 my-20 md:scroll-mt-20 scroll-mt-5 md:mb-28">
             <h1 className="md:text-5xl text-4xl font-bold font-allertaStencil mb-8">
                 My Work
             </h1>
 
             <div className="flex md:flex-row flex-col gap-8 items-center w-full">
-                <div className="rounded-lg cursor-pointer">
-                    <div className="group relative overflow-hidden">
-                        <Image
-                            src={'/images/Image.jpg'}
-                            width={300}
-                            height={400}
-                            alt="Image"
-                            className="rounded-xl w-full object-contain"
-                        />
-
-                        <div className="absolute inset-x-0 bottom-0 h-full flex flex-col items-center justify-center bg-black/50 text-white rounded-xl z-10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out px-8 space-y-3">
-                            <p className="font-bold">
-                                The Title
-                            </p>
-                            <p className="text-center text-sm">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas delectus, et odit enim inventore illum nemo quaerat totam iste assumenda porro, dolorum cum.
-                            </p>
-                            <RedirectIcon
-                                classes={'size-6 bg-white text-black box-content p-2 rounded-full'}
+                {
+                    myWork.map((item, index) => (
+                        <div key={index} className="group relative overflow-hidden">
+                            <Image
+                                src={item.imageSrc}
+                                width={300}
+                                height={400}
+                                alt="Image"
+                                className="rounded-xl w-full object-contain"
                             />
+
+                            <div className="absolute inset-x-0 bottom-0 h-full flex flex-col items-center justify-center bg-black/50 text-white rounded-xl z-10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out px-8 space-y-3">
+                                <p className="font-bold">
+                                    {item.title}
+                                </p>
+                                <p className="text-center text-sm">
+                                    {item.description}
+                                </p>
+                                <Link
+                                    href={item.link}
+                                >
+                                    <RedirectIcon
+                                        classes={'size-6 bg-white text-black box-content p-2 rounded-full'}
+                                    />
+                                </Link>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <div className="rounded-lg cursor-pointer">
-                    <div className="group relative overflow-hidden">
-                        <Image
-                            src={'/images/Image.jpg'}
-                            width={300}
-                            height={400}
-                            alt="Image"
-                            className="rounded-xl w-full object-contain"
-                        />
-
-                        <div className="absolute inset-x-0 bottom-0 h-full flex flex-col items-center justify-center bg-black/50 text-white rounded-xl z-10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out px-8 space-y-3">
-                            <p className="font-bold">
-                                The Title
-                            </p>
-                            <p className="text-center text-sm">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas delectus, et odit enim inventore illum nemo quaerat totam iste assumenda porro, dolorum cum.
-                            </p>
-                            <RedirectIcon
-                                classes={'size-6 bg-white text-black box-content p-2 rounded-full'}
-                            />
-                        </div>
-                    </div>
-                </div>
-
-                <div className="rounded-lg cursor-pointer">
-                    <div className="group relative overflow-hidden">
-                        <Image
-                            src={'/images/Image.jpg'}
-                            width={300}
-                            height={400}
-                            alt="Image"
-                            className="rounded-xl w-full object-contain"
-                        />
-
-                        <div className="absolute inset-x-0 bottom-0 h-full flex flex-col items-center justify-center bg-black/50 text-white rounded-xl z-10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out px-8 space-y-3">
-                            <p className="font-bold">
-                                The Title
-                            </p>
-                            <p className="text-center text-sm">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas delectus, et odit enim inventore illum nemo quaerat totam iste assumenda porro, dolorum cum.
-                            </p>
-                            <RedirectIcon
-                                classes={'size-6 bg-white text-black box-content p-2 rounded-full'}
-                            />
-                        </div>
-                    </div>
-                </div>
+                    ))
+                }
             </div>
 
             <div
                 className="text-center mt-8"
             >
-                <button className="border border-sky-500 text-sky-500 hover:text-white hover:bg-sky-500 transition duration-300 py-2 px-5 rounded-xl">
+                <Link
+                    href={'https://github.com/RoshannCodes'}
+                    target="_blank"
+                    className="border border-sky-500 text-sky-500 hover:text-white hover:bg-sky-500 transition duration-300 py-2 px-5 rounded-xl">
                     See more
-                </button>
+                </Link>
             </div>
         </div>
     )

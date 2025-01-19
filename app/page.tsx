@@ -7,12 +7,14 @@ import ContactMe from "@/components/ContactMe";
 
 export default function Home() {
   return (
-    <div className="md:px-16 px-7">
+    <div className="md:px-16">
       <LandingScreen />
-      <AboutMe />
-      <MyServices />
-      <MyWork />
-      <ContactMe />
+      <div className="px-7 md:px-0">
+        <AboutMe />
+        <MyServices />
+        <MyWork />
+        <ContactMe />
+      </div>
     </div>
   );
 }

@@ -31,7 +31,7 @@ const AboutMe = () => {
     const Skills: TabItem[] = [
         {
             title: "Data Wrangling and Preprocessing",
-            description: 'Profeicient in cleaning, transforming and preparing large datasets using Python librarries'
+            description: 'Proficient in cleaning, transforming and preparing large datasets using Python libraries'
         },
         {
             title: "Exploratory Data Analysis(EDA)",
@@ -45,7 +45,7 @@ const AboutMe = () => {
 
     const Experience: TabItem[] = [
         {
-            title: "Not Availabe",
+            title: "Not Available",
             description: 'No description available'
         },
     ]

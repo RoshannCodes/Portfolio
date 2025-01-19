@@ -58,7 +58,7 @@ const MobileNav = () => {
             >
                 <div
                     onClick={() => toggleNavLinksVisibility()}
-                    className="cursor-pointer z-50 pt-4 ps-2">
+                    className="cursor-pointer z-50 pt-4 ps-2 inline-block">
                     <IoClose
                         className="size-6"
                     />

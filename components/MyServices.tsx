@@ -22,7 +22,7 @@ const MyServices = () => {
   ];
 
   return (
-    <div id="myServices" className="flex flex-col justify-center w-full md:px-16 my-20 md:scroll-mt-20 scroll-mt-5">
+    <div id="myServices" className="flex flex-col justify-center w-full md:px-16 my-20 md:scroll-mt-20 scroll-mt-5 md:mb-28">
       <h1 className="md:text-5xl text-4xl font-bold font-allertaStencil mb-8">
         My Services
       </h1>
