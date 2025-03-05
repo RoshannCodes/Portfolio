@@ -110,7 +110,9 @@ const ContactMe = () => {
                             className="w-4 h-4 text-sky-500"
                         />
                         <p>
-                            koiralaroshan321@gmail.com
+                            <Link href={"mailto:koiralaroshan321@gmail.com"}>
+                                koiralaroshan321@gmail.com
+                            </Link>
                         </p>
                     </div>
 
@@ -138,12 +140,12 @@ const ContactMe = () => {
                     </div>
 
                     <div className="mt-5">
-                        <button
-                            type="button"
+                        <a href={"/files/cv.pdf"}
+                            download={"RoshanKoirala_CV.pdf"}
                             className="px-7 py-2 bg-sky-500 hover:bg-sky-700 transition duration-300 rounded-lg"
                         >
                             Download CV
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -160,7 +162,7 @@ const ContactMe = () => {
                             value={formData.from_name}
                             onChange={handleChange}
                             placeholder="Your Name"
-                            className="w-full bg-[#2D2D2D] focus:outline-none focus:border-none focus:outline-sky-500 border-sky-200 px-5 md:py-2 py-2.5 rounded-lg text-white"
+                            className="w-full bg-[#2D2D2D] focus:outline-hidden focus:border-none focus:outline-sky-500 border-sky-200 px-5 md:py-2 py-2.5 rounded-lg text-white"
                         />
                         {errors.from_name && <p className="text-red-500 text-center mt-2 -mb-2 text-xs sm:text-sm">{errors.from_name}</p>}
                     </div>
@@ -171,7 +173,7 @@ const ContactMe = () => {
                             value={formData.email}
                             onChange={handleChange}
                             placeholder="Your Email"
-                            className="w-full bg-[#2D2D2D] focus:outline-none focus:border-none focus:outline-sky-500 border-sky-200 px-5 md:py-2 py-2.5 rounded-lg text-white"
+                            className="w-full bg-[#2D2D2D] focus:outline-hidden focus:border-none focus:outline-sky-500 border-sky-200 px-5 md:py-2 py-2.5 rounded-lg text-white"
                         />
                         {errors.email && <p className="text-red-500 text-center mt-2 -mb-2 text-xs sm:text-sm">{errors.email}</p>}
                     </div>
@@ -182,7 +184,7 @@ const ContactMe = () => {
                             value={formData.message}
                             onChange={handleChange}
                             placeholder="Your Message"
-                            className="w-full bg-[#2D2D2D] focus:outline-none focus:border-none focus:outline-sky-500 border-sky-200 px-5 md:py-1 py-2 rounded-lg text-white"
+                            className="w-full bg-[#2D2D2D] focus:outline-hidden focus:border-none focus:outline-sky-500 border-sky-200 px-5 md:py-1 py-2 rounded-lg text-white"
                         />
                         {errors.message && <p className="text-red-500 text-center mt-1 -mb-2 text-xs sm:text-sm">{errors.message}</p>}
                     </div>

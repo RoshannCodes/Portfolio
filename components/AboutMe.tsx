@@ -73,7 +73,7 @@ const AboutMe = () => {
             <div className='imageContainer'>
                 <div>
                     <Image
-                        src={'https://media.licdn.com/dms/image/v2/D4E03AQHodzFyOwNLQA/profile-displayphoto-shrink_400_400/B4EZN2487MHEAg-/0/1732866462103?e=1741219200&v=beta&t=g_VdB1WRqU5FkvUBkL9S7RoGS2aEvNoSjw-PtZpBnq8'}
+                        src={'/images/profilenf.jpeg'}
                         width={350}
                         height={350}
                         alt="Roshan's Image"

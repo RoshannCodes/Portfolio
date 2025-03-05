@@ -33,18 +33,18 @@ const MyServices = () => {
             key={index}
             className="flex flex-col space-y-4 p-5 rounded-lg bg-[#363636b3]/90 
                      transition duration-300 transform hover:-translate-y-3 
-                     cursor-pointer hover:bg-sky-500/75 h-full"
+                     cursor-pointer hover:bg-sky-500/75 h-full min-h-72"
           >
             {service.icon}
             <h2 className="text-2xl font-semibold">
               {service.title}
             </h2>
-            <p className="opacity-75 text-sm flex-grow">
+            <p className="opacity-75 text-sm grow">
               {service.description}
             </p>
-            <p className="opacity-75 text-sm">
+            {/* <p className="opacity-75 text-sm">
               Learn more
-            </p>
+            </p> */}
           </div>
         ))}
       </div>
