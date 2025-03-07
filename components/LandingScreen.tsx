@@ -1,6 +1,6 @@
 const LandingScreen = () => {
     return (
-        <div className="min-h-screen w-full flex flex-row items-center justify-start md:px-16 bg-[url('/images/profilenbg.png')] bg-no-repeat md:bg-contain bg-cover md:bg-right bg-[center_left_40%] [clip-path:inset(0_0_10%_0)] bg-fixed md:bg-scroll md:mb-10 mb-5">
+        <div className="min-h-screen w-full flex flex-row items-center justify-start md:px-16 bg-[url('/images/profilenbg.jpeg')] bg-no-repeat md:bg-contain bg-cover bg-[center_left_40%] [clip-path:inset(0_0_10%_0)] bg-fixed md:bg-scroll md:mb-10 mb-5">
             <div className="px-7 md:px-0">
                 <p className="md:text-2xl text-xl leading-normal opacity-75 font-allertaStencil">
                     Aspiring Data Scientist
