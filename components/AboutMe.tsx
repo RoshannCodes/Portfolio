@@ -34,8 +34,8 @@ const AboutMe = () => {
             description: 'Proficient in cleaning, transforming and preparing large datasets using Python libraries'
         },
         {
-            title: "Exploratory Data Analysis(EDA)",
-            description: 'Expertise in identifying patteerns , trends and insits through visualization tools like Matplotlib and Seaborn'
+            title: "Deep Learning for Data Science",
+            description: 'Skilled in building, training, and optimizing deep learning models using TensorFlow and PyTorch for AI applications.'
         },
         {
             title: "Machine Learning and Predictive Modeling",
